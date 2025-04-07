@@ -1,0 +1,44 @@
+#navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    padding: 0px 20px;
+    background-color: var(--background-color);
+}
+
+#EnergyPal{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#EnergyPal-header{
+    font-size: 1.6rem;
+    color: var(--text-color);
+    transform: translateY(1px);
+}
+
+#EnergyPal-status{
+    height: 20px;
+    width: 20px;
+    margin-right: 8px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--state-orange); /* changing when EnergyPal connected */
+}
+
+#logout{
+    font-size: 1.6rem;
+    padding: 5px 10px;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+#logout:hover{
+    background-color: #0062C4;
+    transition: background-color 0.4s;
+}

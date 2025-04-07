@@ -1,0 +1,158 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#control{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 700px;
+    height: 230px;
+}
+
+/* measurements */
+
+#measurements{
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    border: none;
+    padding: 6px 12px;
+    margin: 6px 0px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: fit-content;
+    max-width: 250px;
+}
+
+.measurement{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 6px
+}
+
+.measurement p{
+    margin: 0;
+}
+
+/* outputs, inputs */
+
+#outputs, #inputs{
+    display: flex;
+    flex-direction: column;
+}
+
+.out-button, .in-group{
+    font-family: "Oxanium", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 20px 0px 0px;
+    margin: 6px 0px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border-radius: 8px;
+    border: none;
+    height: 100%;
+}
+
+.out-button:hover{
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    transition: background-color 0.4s;
+}
+
+.out-button p, .in-group p{
+    margin: 0;
+}
+
+.out-status, .in-status{
+    width: 18px;
+    height: 100%;
+    margin-right: 12px;
+    border-radius: 8px;
+    background-color: var(--state-orange); /* depends on actual state */
+}
+
+.unused{
+    opacity: 70%;
+}
+
+/* chart */
+#graph-ranges{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.range-button{
+    font-family: "Oxanium", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.4rem;
+    padding: 5px 10px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    border: none
+}
+
+.range-button:hover{
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    transition: background-color 0.4s;
+}
+
+.range-button:focus{
+    background-color: var(--secondary-color);
+}
+
+#charts{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+}
+
+#measurementsChart{
+    font-family: "Oxanium", sans-serif !important;
+    height: 80vh;
+    margin-bottom: 50px;
+}
+
+@media(max-width: 750px){
+    #control{
+        flex-direction: column;
+        height: fit-content;
+    }
+    #measurements{
+        max-width: calc(100% - 24px);
+    }
+    .out-button, .in-group{
+        height: 25px;
+    }
+}
